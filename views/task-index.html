@@ -1,5 +1,6 @@
+fdjsfsakjdfhlasjk
 <ul>
-  <li ng-repeat="task in tasks">
+  <li ng-repeat="taskObj in tasks" ng-init="task = taskObj.value">
     {{ task.name }}
   </li>
 </ul>
