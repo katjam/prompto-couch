@@ -11,7 +11,7 @@ app.config(function ($routeProvider) {
 			controller: "DashboardCtrl"
 		})
 		.when('/tasks', {
-			templateUrl: 'views/task-index.html',
+			templateUrl: 'views/task-daily.html',
 			controller: "TasksCtrl"
 		})
   .otherwise({
