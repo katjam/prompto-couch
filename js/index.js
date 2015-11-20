@@ -20,8 +20,7 @@ app.config(function ($routeProvider) {
 });
 
 app.controller('HeaderCtrl', function ($scope) {
-	var patientName = 'Harriet';
-	$scope.message = 'Welcome to '+ patientName +'\'s Control Panel';
+	$scope.message = 'Harriet\'s Promptos';
 });
 
 app.controller('LoginCtrl', function ($scope) {

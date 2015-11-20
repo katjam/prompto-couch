@@ -1,7 +1,7 @@
-<h1>Harriet Smith<h1>
+<a href="tasks/weekly" class="button">Weekly promptos</a>
 <h2>Today</h2>
-<ul>
-  <li ng-repeat="taskObj in tasks" ng-init="task = taskObj.value">
-    {{ task.time }} {{ task.name }}
-  </li>
-</ul>
+  <ul>
+    <li ng-repeat="taskObj in tasks" ng-init="task = taskObj.value">
+      <span class="done-{{ task.completed }}"><a href="tasks/{{ task._id }}">{{ task.time }} {{ task.name }}</a></span>
+    </li>
+  </ul>
