@@ -1,0 +1,21 @@
+.login
+{
+	margin:0 auto;
+	width:400px;
+	padding:10px;
+
+}
+.login label
+{
+	display:block;
+	width:30%;
+	float:left;
+}
+.login input
+{
+	display:block;
+}
+.login 
+{
+    border-radius: 100%;
+}
