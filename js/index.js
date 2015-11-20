@@ -2,7 +2,11 @@ var app = angular.module('Prompto', ['ngResource', 'ngRoute']);
 
 app.config(function ($routeProvider) {
 	$routeProvider
-		.when('/', {
+		.when('/login', {
+			templateUrl: 'views/login.html',
+			controller: "LoginCtrl"
+		})
+    .when('/', {
 			templateUrl: 'views/dashboard.html',
 			controller: "DashboardCtrl"
 		})
@@ -18,6 +22,9 @@ app.config(function ($routeProvider) {
 app.controller('HeaderCtrl', function ($scope) {
 	var patientName = 'Harriet';
 	$scope.message = 'Welcome to '+ patientName +'\'s Control Panel';
+});
+
+app.controller('LoginCtrl', function ($scope) {
 });
 
 app.controller('TasksCtrl', function ($scope, $resource) {
