@@ -39,16 +39,19 @@ img.list-icon {
 }
 
 .task-summary {
-  height: 290px;
-  width: 290px;
+  height: 300px;
+  width: 300px;
   text-align: center;
-  padding: 20px;
-  background: pink;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .task-summary span {
   display: block;
+}
+
+.task-summary span, img {
+  margin-top: 5px;
 }
 
 .task-summary img {
@@ -57,11 +60,14 @@ img.list-icon {
 }
 
 .task-summary p {
+  border: 5px solid pink;
   background: #Eb2e5e;
   width: 250px;
   height: 250px;
   border-radius: 100%;
   z-index: -1;
+  padding-top: 25px;
+  font-size: 14pt;
 }
 
 @media only screen and (max-width: 875px) {
