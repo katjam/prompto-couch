@@ -168,6 +168,11 @@ img.list-icon {
   display: block;
   margin: 1em auto;
 }
+
+.task-show li {
+  text-transform: capitalize;
+}
+
 @media only screen and (max-width: 875px) {
   ul[role="nav"] {
     float: none;

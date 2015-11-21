@@ -1,3 +1,7 @@
-{{task.name}}
-{{task.category}}
-{{task.time}}
+<ul class="task-show">
+<li>{{task.name}}</li>
+<li>{{task.category}}</li>
+<li>{{task.time}} {{task.day}} {{task.frequency}}</li>
+<li>{{getStatus(task)}}</li>
+<!--li><img task-icon="task" class="list-icon"><li-->
+</ul>

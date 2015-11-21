@@ -80,27 +80,46 @@ app.controller('TaskShowCtrl', function ($scope, $routeParams, $http) {
   $http.get('https://prompto.smileupps.com/tasks/' + $routeParams._id)
   .success(function (response){
     $scope.task = response;
+	
+	
+	$scope.getStatus = function(task) {
+    if (task.completed === false && moment(task.time, 'HH:mm') > moment()) {
+			return 'later';
+		}
+		if (task.completed === false && moment(task.time, 'HH:mm') < moment()){
+			return 'missed';
+		}
+		if (task.completed === true){
+			return 'done';
+		}
+		return '';
+	}
   });
 });
 
 app.directive('taskIcon', function(){
-  return {
-    restrict: 'A',
-    scope: {
-      category: '=taskIcon'
-    },
-    link: function (scope, elem){
-      var icons = {
-        'Charging': 'img/icon_charge.svg',
-        'Hygine': 'img/icon_pill.svg',
-        'Nutrition': 'img/icon_nutrition.svg',
-        'Medication': 'img/icon_pill.svg',
-        'Visit': 'img/photos/Ramone.png'
-      },
-      defaultIcon = 'img/icon_star.svg';
-      elem.attr('src', icons[scope.category] || defaultIcon);
-    }
-  };
+	return {
+		restrict: 'A',
+		scope: {
+			task: '=taskIcon'
+		},
+		link: function (scope, elem) {
+			var icon,
+				icons = {
+					'Charging': 'img/icon_charge.svg',
+					'Hygiene': 'img/icon_pill.svg',
+					'Nutrition': 'img/icon_nutrition.svg',
+					'Medication': 'img/icon_pill.svg',
+					'Visit': 'img/photos/Ramone.png'
+				},
+				defaultIcon = 'img/icon_star.svg';
+			console.log(scope);
+
+			icon = icons[scope.category] || defaultIcon;
+
+			elem.attr('src', icon);
+		}
+	};
 });
 
 var app = {
