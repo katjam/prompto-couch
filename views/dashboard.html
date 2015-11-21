@@ -1,10 +1,15 @@
 <div class="task-summary">
 	<a href="#/tasks/day">
-	  <p ng-repeat="taskObj in tasks" ng-init="task = taskObj.key">
-		<span class="count">1</span>
+	  <p ng-repeat="task in tasks">
+		  <span class="count">1</span>
 		  <span class="description">missed</span>
 		  <img task-icon="task.category">
 		  <span class="category {{task.category}}">{{task.category}}</span>
-		</p>
-	</a>
+    </p>
+    <p ng-if="!tasks.length">
+      <span class="count">8</span>
+      <span class="description">All tasks</span>
+      <img src="../img/icon_tick.svg">
+      <span class="">completed</span>
+    </p>
 </div>
