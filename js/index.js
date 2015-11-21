@@ -98,28 +98,23 @@ app.controller('TaskShowCtrl', function ($scope, $routeParams, $http) {
 });
 
 app.directive('taskIcon', function(){
-	return {
-		restrict: 'A',
-		scope: {
-			task: '=taskIcon'
-		},
-		link: function (scope, elem) {
-			var icon,
-				icons = {
-					'Charging': 'img/icon_charge.svg',
-					'Hygiene': 'img/icon_pill.svg',
-					'Nutrition': 'img/icon_nutrition.svg',
-					'Medication': 'img/icon_pill.svg',
-					'Visit': 'img/photos/Ramone.png'
-				},
-				defaultIcon = 'img/icon_star.svg';
-			console.log(scope);
-
-			icon = icons[scope.category] || defaultIcon;
-
-			elem.attr('src', icon);
-		}
-	};
+  return {
+    restrict: 'A',
+    scope: {
+      category: '=taskIcon'
+    },
+    link: function (scope, elem){
+      var icons = {
+        'Charging': 'img/icon_charge.svg',
+        'Hygine': 'img/icon_pill.svg',
+        'Nutrition': 'img/icon_nutrition.svg',
+        'Medication': 'img/icon_pill.svg',
+        'Visit': 'img/photos/Ramone.png'
+      },
+      defaultIcon = 'img/icon_star.svg';
+      elem.attr('src', icons[scope.category] || defaultIcon);
+    }
+  };
 });
 
 var app = {
