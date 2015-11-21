@@ -31,11 +31,11 @@ img.list-icon {
 }
 
 .status-done .list-icon {
-  background: blue;
+  background: #4dbdb7;
 }
 
 .status-later .list-icon {
-  background: yellow;
+  background: #e8d22c;
 }
 
 .task-summary {
