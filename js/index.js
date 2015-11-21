@@ -61,7 +61,7 @@ app.controller('TasksWeekCtrl', function ($scope, $http) {
 app.controller('DashboardCtrl', function ($scope, $http) {
   $http.get('https://prompto.smileupps.com/tasks/_design/tasks/_view/missed')
     .success(function (response){
-      $scope.tasks = response.rows;
+		$scope.tasks = response.rows;
     });
 
 	$scope.taskClick = function (){
