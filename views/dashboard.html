@@ -1,1 +1,9 @@
-iiiiii
+<div class="task-summary">
+  <p ng-repeat="taskObj in tasks" ng-init="task = taskObj.key">
+  <span class="count">{{task.name}}1</span>
+    <span class="description">missed</span>
+    <img task-icon="task.category">
+    <span class="category {{task.category}}">{{task.category}}</span>
+    <span class="time">today</span>
+  </p>
+</div>
