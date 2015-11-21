@@ -2,7 +2,7 @@
   <ul>
     <li ng-repeat="taskObj in tasks" ng-init="task = taskObj.value">
       <span class="status {{ getStatus(task) }} cat-{{ task.category }}">
-		{{ task.time }}
+        <span class="time">{{ task.time }}</span>
         <span class="task-icon">
           <img task-icon="task.category" class="list-icon">
         </span>

@@ -1,3 +1,8 @@
+div[role="footer"] {
+  text-align: center;
+  margin: 0 auto;
+}
+
 ul[role="nav"] {
   display: block;
   float: right;
@@ -9,11 +14,16 @@ ul[role="nav"] li {
   list-style: none;
   padding: 10px;
 }
+
 img.list-icon {
   width: 35px;
   height: 35px;
   padding: 6px;
   border-radius: 100%;
+}
+
+.time {
+  font-family: 'Poiret One', cursive;
 }
 
 .status.missed .list-icon {
