@@ -68,7 +68,7 @@ app.controller('DashboardCtrl', function ($scope, $http) {
   .success(function (response){
     var tasks = [];
     angular.forEach(response.rows, function(t) {
-      if (t.key.completed === false && moment(t.key.time, 'HH:mm') < moment()) {
+      if (moment(t.key.time, 'HH:mm') < moment()) {
         tasks.push(t.key);
       }
     });

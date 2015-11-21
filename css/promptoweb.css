@@ -166,7 +166,7 @@ img.list-icon {
   padding-top: 20px;
   font-size: 14pt;
   display: block;
-  margin: 0.25em auto;
+  margin: 1em auto;
 }
 @media only screen and (max-width: 875px) {
   ul[role="nav"] {
