@@ -92,6 +92,8 @@ img.list-icon {
   height: 35px;
   padding: 6px;
   border-radius: 100%;
+  position: relative;
+  top: 8px;
 }
 
 .time {
@@ -100,6 +102,13 @@ img.list-icon {
 
 .status.missed .list-icon {
   background: red;
+}
+.status.missed {
+  background-color: rgba(255,100,100,0.6);
+  border-radius: 5px;
+  padding: 10px 5px;
+  padding-left: 40px;
+  margin: -13px;
 }
 
 .status.done .list-icon {
@@ -159,4 +168,5 @@ img.list-icon {
     width: 100%;
   }
 }
+
 

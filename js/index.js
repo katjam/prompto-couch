@@ -24,7 +24,7 @@ app.config(function ($routeProvider) {
 });
 
 app.controller('HeaderCtrl', function ($scope) {
-	$scope.message = 'Harriet\'s Promptos';
+	$scope.message = 'Harriet\'s Prompto';
 });
 
 app.controller('LoginCtrl', function ($scope) {
