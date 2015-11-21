@@ -1,0 +1,14 @@
+<h2>Today</h2>
+  <ul>
+    <li ng-repeat="taskObj in tasks" ng-init="task = taskObj.value">
+      <span class="status {{ getStatus(task) }} cat-{{ task.category }}">
+        <span class="time">{{ task.time }}</span>
+        <span class="task-icon">
+          <img task-icon="task.category" class="list-icon">
+        </span>
+        <a href="tasks/{{ task._id }}">
+          {{ task.name }}
+        </a>
+      </span>
+    </li>
+  </ul>

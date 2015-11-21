@@ -1,0 +1,174 @@
+div[role="footer"] {
+  text-align: center;
+  margin: 0 auto;
+}
+
+ul[role="nav"] {
+  display: block;
+  float: right;
+  margin: 0;
+}
+
+ul[role="nav"] li {
+  float:left;
+  list-style: none;
+  padding: 10px;
+}
+
+ul {
+  list-style:none;
+  font-size: 1.25em;
+  font-weight: normal;
+  color: white;
+}
+
+a {
+  color:white;
+  text-decoration:none;
+  list-style:none;
+}
+
+.button a:hover {
+  background-color:#Eb2e5e;
+}
+
+li.button.active a {
+  background-color:#ff80a0;
+}
+
+ul[role="nav"] li a {
+  background-color: #ED4771;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.login {
+  margin:0 auto;
+  width:400px;
+  padding:10px;
+
+}
+
+.login label {
+  display:block;
+  width:30%;
+  float:left;
+}
+
+.login input {
+  display:block;
+}
+
+.login{
+  border-radius: 100%;
+}
+
+.web-wrapper #app {
+  margin-top: 1em;
+}
+
+.status {
+  margin-right:10px;
+  padding-left:30px;
+}
+
+.status.done {
+  background-image:url(../img/icon_tick.svg);
+  background-repeat:no-repeat;
+  background-size:20px 20px;
+}
+
+.status.missed {
+  background-image:url(../img/icon_cross.svg);
+  background-repeat:no-repeat;
+  background-size:20px 20px;
+}
+
+
+img.list-icon {
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  border-radius: 100%;
+  position: relative;
+  top: 8px;
+}
+
+.time {
+  font-family: 'Poiret One', cursive;
+  width: 80px;
+  display: inline-block;
+}
+
+.status.missed .list-icon {
+  background: red;
+}
+.status.missed {
+  background-color: rgba(255,100,100,0.6);
+  border-radius: 5px;
+  padding: 10px 5px;
+  padding-left: 40px;
+  margin: -13px;
+}
+
+.status.done .list-icon {
+  background: #4dbdb7;
+}
+
+.status.later .list-icon {
+  background: #e8d22c;
+}
+
+.task-summary {
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.task-summary span {
+  display: block;
+}
+
+.task-summary span, img {
+  margin-top: 4px;
+}
+
+.task-summary img {
+  height: 80px;
+  width: 80px;
+}
+
+.task-summary .count {
+	font-size: 22pt;
+	font-weight: 700;
+}
+
+.task-summary p {
+  border: 5px solid pink;
+  background: #Eb2e5e;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  z-index: -1;
+  padding-top: 20px;
+  font-size: 14pt;
+}
+@media only screen and (max-width: 875px) {
+  ul[role="nav"] {
+    float: none;
+  } 
+  ul[role="nav"] li {
+    float: none;
+    margin: 10px;
+    text-align: center;
+   }
+  ul[role="nav"] li a {
+    width: 100%;
+  }
+}
+
+
