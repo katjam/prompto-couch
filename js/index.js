@@ -40,7 +40,7 @@ app.controller('TasksDayCtrl', function ($scope, $http) {
 	    $scope.tasks = response.rows;
     });
 
-	$scope.taskday = moment().format('dddd Do MMMM');
+	$scope.taskday = moment().format('dddd, Do MMMM');
 	
 	$scope.getStatus = function(task) {
     if (task.completed === false && moment(task.time, 'HH:mm') > moment()) {
