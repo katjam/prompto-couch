@@ -18,6 +18,10 @@ app.config(function ($routeProvider) {
 			templateUrl: 'views/task-weekly.html',
 			controller: "TasksWeekCtrl"
 		})
+    .when('/tasks/:_id', {
+			templateUrl: 'views/task-show.html',
+			controller: "TaskShowCtrl"
+		})
   .otherwise({
 			redirectTo: '/'
 		});
@@ -68,6 +72,13 @@ app.controller('DashboardCtrl', function ($scope, $http) {
 	$scope.taskClick = function (){
 		console.log("clicked.");
 	};
+});
+
+app.controller('TaskShowCtrl', function ($scope, $routeParams, $http) {
+  $http.get('https://prompto.smileupps.com/tasks/' + $routeParams._id)
+  .success(function (response){
+    $scope.task = response;
+  });
 });
 
 app.directive('taskIcon', function(){
