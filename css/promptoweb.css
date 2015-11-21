@@ -1,3 +1,10 @@
+h2 {
+  text-align: center;
+  color: #4dbdb7;
+  font-size: 2rem;
+}
+
+
 div[role="footer"] {
   text-align: center;
   margin: 0 auto;
@@ -66,7 +73,7 @@ ul[role="nav"] li a {
 }
 
 .web-wrapper #app {
-  margin-top: 1em;
+  margin-top: 0.25em;
 }
 
 .status {
@@ -85,7 +92,7 @@ ul[role="nav"] li a {
   background-image:url(../img/icon_cross.svg);
   background-repeat:no-repeat;
   background-size:20px 20px;
-    background-position: 8px 13px;
+  background-position: 8px 13px;
 }
 
 
@@ -158,6 +165,8 @@ img.list-icon {
   z-index: -1;
   padding-top: 20px;
   font-size: 14pt;
+  display: block;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 875px) {
   ul[role="nav"] {
