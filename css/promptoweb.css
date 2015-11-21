@@ -171,6 +171,7 @@ img.list-icon {
 @media only screen and (max-width: 875px) {
   ul[role="nav"] {
     float: none;
+    padding-left: 0;
   } 
   ul[role="nav"] li {
     float: none;
