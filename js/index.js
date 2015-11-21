@@ -67,3 +67,10 @@ var app = {
 };
 
 app.initialize();
+
+$(document).ready(function(){
+  $('ul[role="nav"] li').click(function(){
+    $(this).siblings('li').removeClass('active');
+    $(this).addClass('active');
+  });
+});
