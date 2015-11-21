@@ -16,6 +16,10 @@ img.list-icon {
   border-radius: 100%;
 }
 
+.time {
+  font-family: 'Poiret One', cursive;
+}
+
 .status.missed .list-icon {
   background: red;
 }
