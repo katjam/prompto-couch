@@ -41,12 +41,17 @@ img.list-icon {
 }
 
 .task-summary span, img {
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 .task-summary img {
   height: 80px;
   width: 80px;
+}
+
+.task-summary .count {
+	font-size: 22pt;
+	font-weight: 700;
 }
 
 .task-summary p {
@@ -56,7 +61,7 @@ img.list-icon {
   height: 250px;
   border-radius: 100%;
   z-index: -1;
-  padding-top: 25px;
+  padding-top: 20px;
   font-size: 14pt;
 }
 @media only screen and (max-width: 875px) {
