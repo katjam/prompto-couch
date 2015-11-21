@@ -65,13 +65,15 @@ app.controller('TasksWeekCtrl', function ($scope, $http) {
 
 app.controller('DashboardCtrl', function ($scope, $http) {
   $http.get('https://prompto.smileupps.com/tasks/_design/tasks/_view/missed')
-    .success(function (response){
-		$scope.tasks = response.rows;
+  .success(function (response){
+    var tasks = [];
+    angular.forEach(response.rows, function(t) {
+      if (t.key.completed === false && moment(t.key.time, 'HH:mm') < moment()) {
+        tasks.push(t.key);
+      }
     });
-
-	$scope.taskClick = function (){
-		console.log("clicked.");
-	};
+    $scope.tasks = tasks;
+  });
 });
 
 app.controller('TaskShowCtrl', function ($scope, $routeParams, $http) {
