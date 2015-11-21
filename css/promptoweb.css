@@ -15,6 +15,78 @@ ul[role="nav"] li {
   padding: 10px;
 }
 
+ul {
+  list-style:none;
+  font-size: 1.25em;
+  font-weight: normal;
+  color: white;
+}
+
+a {
+  color:white;
+  text-decoration:none;
+  list-style:none;
+}
+
+.button a:hover {
+  background-color:#Eb2e5e;
+}
+
+li.button.active a {
+  background-color:#ff80a0;
+}
+
+ul[role="nav"] li a {
+  background-color: #ED4771;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.login {
+  margin:0 auto;
+  width:400px;
+  padding:10px;
+
+}
+
+.login label {
+  display:block;
+  width:30%;
+  float:left;
+}
+
+.login input {
+  display:block;
+}
+
+.login{
+  border-radius: 100%;
+}
+
+.web-wrapper #app {
+  margin-top: 1em;
+}
+
+.status {
+  margin-right:10px;
+  padding-left:30px;
+}
+
+.status.done {
+  background-image:url(../img/icon_tick.svg);
+  background-repeat:no-repeat;
+  background-size:20px 20px;
+}
+
+.status.missed {
+  background-image:url(../img/icon_cross.svg);
+  background-repeat:no-repeat;
+  background-size:20px 20px;
+}
+
+
 img.list-icon {
   width: 35px;
   height: 35px;
@@ -86,80 +158,5 @@ img.list-icon {
   ul[role="nav"] li a {
     width: 100%;
   }
-}
-ul
-{
-	list-style:none;
-	font-size: 1.25em;
-    font-weight: normal;
-	color: white;
-}
-a
-{
-	color:white;
-	text-decoration:none;
-	list-style:none;
-}
-.button a:hover
-{
-	background-color:#Eb2e5e;
-}
-li.button.active a
-{
-	background-color:#ff80a0;
-}
-ul[role="nav"] li a {
-  background-color: #ED4771;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 20px;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-.login
-{
-	margin:0 auto;
-	width:400px;
-	padding:10px;
-
-}
-.login label
-{
-	display:block;
-	width:30%;
-	float:left;
-}
-.login input
-{
-	display:block;
-}
-.login 
-{
-    border-radius: 100%;
-}
-
-.web-wrapper #app
-{
-  margin-top: 1em;
-}
-
-.status
-{
-	margin-right:10px;
-	padding-left:30px;
-}
-
-.status.done
-{
-	background-image:url(../img/icon_tick.svg);
-	background-repeat:no-repeat;
-	background-size:20px 20px;
-}
-
-.status.missed
-{
-	background-image:url(../img/icon_cross.svg);
-	background-repeat:no-repeat;
-	background-size:20px 20px;
 }
 
