@@ -10,9 +10,13 @@ app.config(function ($routeProvider) {
 			templateUrl: 'views/dashboard.html',
 			controller: "DashboardCtrl"
 		})
-		.when('/tasks', {
+		.when('/tasks/day', {
 			templateUrl: 'views/task-daily.html',
-			controller: "TasksCtrl"
+			controller: "TasksDayCtrl"
+		})
+		.when('/tasks/week', {
+			templateUrl: 'views/task-weekly.html',
+			controller: "TasksWeekCtrl"
 		})
   .otherwise({
 			redirectTo: '/'
@@ -26,7 +30,7 @@ app.controller('HeaderCtrl', function ($scope) {
 app.controller('LoginCtrl', function ($scope) {
 });
 
-app.controller('TasksCtrl', function ($scope, $http) {
+app.controller('TasksDayCtrl', function ($scope, $http) {
 	$http.get('https://prompto.smileupps.com/tasks/_design/tasks/_view/all')
     .success(function (response){
 	    $scope.tasks = response.rows;
@@ -37,18 +41,14 @@ app.controller('TasksCtrl', function ($scope, $http) {
 	};
 });
 
-app.controller('DashboardCtrl', function ($scope, $resource) {
-	var Tasks = $resource('https://prompto.smileupps.com/tasks');
-	//$scope.tasks = Tasks.get();
+app.controller('TasksWeekCtrl', function ($scope, $http) {
+	$http.get('https://prompto.smileupps.com/tasks/_design/tasks/_view/all')
+    .success(function (response){
+	    $scope.tasks = response.rows;
+    });
+});
 
-	$scope.tasks = [
-		{'name':'Take Medication','category':'Medication', time: '08:00', completed: true },
-		{'name':'Brush Teeth','category':'Hygene', time: '08:15', completed: true},
-		{'name':'Take Medication','category':'Medication', time: '15:00'},
-		{'name':'Eat Dinner','category':'Food', time: '19:00'},
-		{'name':'Take Medication','category':'Medication', time: '21:00'},
-		{'name':'Charge iPad','category':'Devices', time: '22:00'}
-	];
+app.controller('DashboardCtrl', function ($scope, $resource) {
 
 	$scope.taskClick = function (){
 		console.log("clicked.");
