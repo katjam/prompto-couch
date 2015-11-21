@@ -26,16 +26,17 @@ app.config(function ($routeProvider) {
 app.controller('HeaderCtrl', function ($scope) {
 	$scope.message = 'Harriet\'s Prompto';
 });
-
 app.controller('LoginCtrl', function ($scope) {
 });
+
 
 app.controller('TasksDayCtrl', function ($scope, $http) {
 	$http.get('https://prompto.smileupps.com/tasks/_design/tasks/_view/all')
     .success(function (response){
 	    $scope.tasks = response.rows;
     });
-	
+
+	$scope.taskday = moment().format('dddd Do MMMM');
 	
 	$scope.getStatus = function(task) {
     if (task.completed === false && moment(task.time, 'HH:mm') > moment()) {
