@@ -26,16 +26,16 @@ img.list-icon {
   border-radius: 100%;
 }
 
-.status-missed .list-icon {
+.status- .list-icon {
   background: red;
 }
 
 .status-done .list-icon {
-  background: blue;
+  background: #4dbdb7;
 }
 
 .status-later .list-icon {
-  background: yellow;
+  background: #e8d22c;
 }
 
 .task-summary {
