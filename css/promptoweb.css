@@ -18,6 +18,26 @@ ul[role="nav"] li a {
   padding: 8px 16px;
   text-decoration: none;
 }
+
+img.list-icon {
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  border-radius: 100%;
+}
+
+.status-missed .list-icon {
+  background: red;
+}
+
+.status-done .list-icon {
+  background: blue;
+}
+
+.status-later .list-icon {
+  background: yellow;
+}
+
 @media only screen and (max-width: 875px) {
   ul[role="nav"] {
     float: none;
