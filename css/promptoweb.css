@@ -89,9 +89,9 @@ a
 {
 	background-color:#Eb2e5e;
 }
-li.active a
+li.button.active a
 {
-	background-color:yellow;
+	background-color:#ff3568;
 }
 ul[role="nav"] li a {
   background-color: #ED4771;
