@@ -21,11 +21,37 @@ img.list-icon {
 }
 
 .status-done .list-icon {
-  background: blue;
+  background: #4dbdb7;
 }
 
 .status-later .list-icon {
-  background: yellow;
+  background: #e8d22c;
+}
+
+.task-summary {
+  height: 290px;
+  width: 290px;
+  text-align: center;
+  padding: 20px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.task-summary span {
+  display: block;
+}
+
+.task-summary img {
+  height: 80px;
+  width: 80px;
+}
+
+.task-summary p {
+  background: #Eb2e5e;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  z-index: -1;
 }
 @media only screen and (max-width: 875px) {
   ul[role="nav"] {

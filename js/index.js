@@ -35,10 +35,20 @@ app.controller('TasksDayCtrl', function ($scope, $http) {
     .success(function (response){
 	    $scope.tasks = response.rows;
     });
-
-	$scope.taskClick = function (){
-		console.log("clciked.");
-	};
+	
+	
+	$scope.getStatus = function(task) {
+    if (task.completed === false && moment(task.time, 'HH:mm') > moment()) {
+			return 'later';
+		}
+		if (task.completed === false && moment(task.time, 'HH:mm') < moment()){
+			return 'missed';
+		}
+		if (task.completed === true){
+			return 'done';
+		}
+		return '';
+	}
 });
 
 app.controller('TasksWeekCtrl', function ($scope, $http) {
@@ -48,7 +58,11 @@ app.controller('TasksWeekCtrl', function ($scope, $http) {
     });
 });
 
-app.controller('DashboardCtrl', function ($scope, $resource) {
+app.controller('DashboardCtrl', function ($scope, $http) {
+  $http.get('https://prompto.smileupps.com/tasks/_design/tasks/_view/missed')
+    .success(function (response){
+      $scope.tasks = response.rows;
+    });
 
 	$scope.taskClick = function (){
 		console.log("clicked.");
