@@ -35,10 +35,20 @@ app.controller('TasksDayCtrl', function ($scope, $http) {
     .success(function (response){
 	    $scope.tasks = response.rows;
     });
-
-	$scope.taskClick = function (){
-		console.log("clciked.");
-	};
+	
+	
+	$scope.getStatus = function(task) {
+		if (task.completed === false && moment(task.time, 'HH:mm') > moment()) {
+			return 'later';
+		}
+		if (task.completed === false && moment(task.time, 'HH:mm') < moment()){
+			return 'missed';
+		}
+		if (task.completed === true){
+			return 'done';
+		}
+		return '';
+	}
 });
 
 app.controller('TasksWeekCtrl', function ($scope, $http) {
