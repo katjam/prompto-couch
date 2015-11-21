@@ -1,8 +1,8 @@
 <h2>Today</h2>
   <ul>
     <li ng-repeat="taskObj in tasks" ng-init="task = taskObj.value">
-      <span class="status-{{ task.completed }} cat-{{ task.category }}">
-        {{ task.time }}
+      <span class="status {{ task.completed }} cat-{{ task.category }}">
+		{{ task.time }}
         <span class="task-icon">
           <img task-icon="task.category" class="list-icon">
         </span>

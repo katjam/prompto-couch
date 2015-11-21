@@ -9,16 +9,6 @@ ul[role="nav"] li {
   list-style: none;
   padding: 10px;
 }
-
-ul[role="nav"] li a {
-  background-color: #ED4771;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 20px;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
 img.list-icon {
   width: 35px;
   height: 35px;
@@ -37,7 +27,6 @@ img.list-icon {
 .status-later .list-icon {
   background: yellow;
 }
-
 @media only screen and (max-width: 875px) {
   ul[role="nav"] {
     float: none;
@@ -64,17 +53,21 @@ a
 	text-decoration:none;
 	list-style:none;
 }
-li.active a
-{
-	background-color:yellow;
-}
 .button a:hover
 {
 	background-color:#Eb2e5e;
 }
-.done-true
+li.active a
 {
-	background-image: url("../../www/prompto/img/icon_tick");
+	background-color:yellow;
+}
+ul[role="nav"] li a {
+  background-color: #ED4771;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 8px 16px;
+  text-decoration: none;
 }
 .login
 {
@@ -102,3 +95,17 @@ li.active a
 {
   margin-top: 1em;
 }
+
+.status
+{
+	margin-right:10px;
+	padding-left:30px;
+}
+.status.true
+{
+	background-image:url(../img/icon_tick.svg);
+	background-repeat:no-repeat;
+	background-size:20px 20px;
+}
+
+
