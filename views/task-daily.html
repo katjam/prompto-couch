@@ -2,6 +2,6 @@
 <h2>Today</h2>
   <ul>
     <li ng-repeat="taskObj in tasks" ng-init="task = taskObj.value">
-      <span class="done-{{ task.completed }}"><a href="tasks/{{ task._id }}">{{ task.time }} {{ task.name }}</a></span>
+      <span class="done-{{ task.completed }} cat-{{ task.category }}"><a href="tasks/{{ task._id }}">{{ task.time }} {{ task.name }}</a></span>
     </li>
   </ul>

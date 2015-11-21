@@ -1,3 +1,38 @@
+ul[role="nav"] {
+  display: block;
+  float: right;
+  margin: 0;
+}
+
+ul[role="nav"] li {
+  float: left;
+  list-style: none;
+  padding: 10px;
+}
+
+ul[role="nav"] li a {
+  background-color: #ED4771;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+  ul[role="nav"] {
+    float: none;
+  } 
+  ul[role="nav"] li {
+    float: none;
+    margin: 10px;
+    text-align: center;
+   }
+  ul[role="nav"] li a {
+    width: 100%;
+  }
+}
+
 .login
 {
 	margin:0 auto;
@@ -18,4 +53,9 @@
 .login 
 {
     border-radius: 100%;
+}
+
+.web-wrapper #app
+{
+  margin-top: 1em;
 }

@@ -12,14 +12,18 @@
       <div class="logo">
         <div class="col-wrapper">
 				  <a href="#/" id="primary-logo"><img src="img/prompto.svg" alt="Prompto logo"></a>
+          <ul role="nav"><li class="button"><a href="#">Harriet's dashboard</a></li><li class="button"><a href="#">Harriet's day</a></li><li class="button"><a href="#">Harriet's Week</a></li></ul>
+
         </div>
       </div>
       <div class="col-wrapper greeting">
         <h1>{{message}}</h1>
+
       </div>
+
 		</header>
 		
-		<div id="app" ng-view></div>
+    <div id="app" class="col-wrapper" ng-view></div>
 
 		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 		<script type="text/javascript" src="js/angular.js"></script>
