@@ -1,7 +1,14 @@
-<a href="tasks/weekly" class="button">Weekly promptos</a>
-<h2>Today</h2>
+<h2>ToWeekly</h2>
   <ul>
     <li ng-repeat="taskObj in tasks" ng-init="task = taskObj.value">
-      <span class="done-{{ task.completed }} cat-{{ task.category }}"><a href="tasks/{{ task._id }}">{{ task.time }} {{ task.name }}</a></span>
+      <span class="done-{{ task.completed }} cat-{{ task.category }}">
+        {{ task.time }}
+        <span class="task-icon">
+          <img task-icon="task.category" class="list-icon">
+        </span>
+        <a href="tasks/{{ task._id }}">
+          {{ task.name }}
+        </a>
+      </span>
     </li>
   </ul>
