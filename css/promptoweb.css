@@ -98,6 +98,8 @@ img.list-icon {
 
 .time {
   font-family: 'Poiret One', cursive;
+  width: 80px;
+  display: inline-block;
 }
 
 .status.missed .list-icon {
